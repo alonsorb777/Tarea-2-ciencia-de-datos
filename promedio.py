@@ -1,8 +1,3 @@
-def promedio(datos):
-    """
-    calcula el promedio.
-    """
-    suma = 0
-    for x in datos:
-        suma += x
-    return suma / len(datos)
+git rm nombre_del_archivo.py
+git commit -m "promedio.py"
+git push
