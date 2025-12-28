@@ -140,11 +140,15 @@ calcula el precentil (p) ignora los NaN
 
 
 def rang_intq(datos):
+	"""
+Calcula el rango intercuartilico
+	"""
 	q1 = precentil(datos,25)
 	q3 = precentil(datos,75)
 
 	return q3-q1
 	
+
 
 
 
