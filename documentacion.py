@@ -134,6 +134,8 @@ def precentil(datos,p):
     calcula el precentil (p) ignora los NaN de la forma "nearest-rank" que creo que es la mas conveniente
     """
     datos = limpiar_nan(datos)
+
+	datos = [float(x) for x in datos]
     if len(datos) == 0:
         return float("nan")
 
@@ -154,3 +156,4 @@ def rang_intq(datos):
     q3 = precentil(datos,75)
 
     return q3-q1
+
