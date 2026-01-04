@@ -157,3 +157,23 @@ def rang_intq(datos):
 
     return q3-q1
 
+def covarianza(x,y):
+	"""
+	calcula la covarianza de dos variables
+	"""
+	n = len(x)
+	px = promedio(x)
+	py = promedio(y)
+
+	suma = 0
+	for xi, yi in zip(x,y):
+		suma+= (xi-px) * (yi-py)
+
+	return suma/n
+
+def correlacion(x,y):
+	"""
+	calcula la correlacion segun la formula de Pearson
+	"""
+	return covarianza(x,y)/(des_estandar(x)*des_estandar(y))
+	
